@@ -78,11 +78,7 @@ const LandingPage = () => {
     { name: "Business", icon: "📊", color: "#4299E1" },
     { name: "Art", icon: "🎨", color: "#ED8936" },
     { name: "Science", icon: "🔬", color: "#805AD5" },
-    { name: "Travel", icon: "✈️", color: "#38B2AC" },
-    { name: "Food", icon: "🍲", color: "#F56565" },
-    { name: "Fashion", icon: "👗", color: "#D53F8C" },
-    { name: "Education", icon: "📚", color: "#3182CE" },
-    { name: "Environment", icon: "🌎", color: "#2F855A" }
+    { name: "Travel", icon: "✈️", color: "#38B2AC" }
   ];
 
   // Latest posts
@@ -109,14 +105,6 @@ const LandingPage = () => {
       excerpt: "Building effective team dynamics in distributed work environments.",
       image: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3",
       category: "Business",
-      date: "1 week ago"
-    },
-    {
-      id: 4,
-      title: "Sustainable Fashion Trends",
-      excerpt: "Exploring eco-friendly approaches to style and fashion consumption.",
-      image: "https://images.unsplash.com/photo-1538331269258-6c97a6bdeae0?ixlib=rb-4.0.3",
-      category: "Fashion",
       date: "1 week ago"
     }
   ];
@@ -222,7 +210,7 @@ const LandingPage = () => {
       <header ref={headerRef} className={`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-container">
           <div className="logo-container">
-            <div className="logo">
+            <div>
               <span className="echo">Echo</span>
               <span className="verse">Verse</span>
             </div>
@@ -235,7 +223,7 @@ const LandingPage = () => {
               <li><a href="#about">About</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
               <li>
-                <Link to="/login" className="cta-button">Login</Link>
+                <Link to="/login" className="cta-button login">Login</Link>
               </li>
             </ul>
           </nav>
@@ -244,18 +232,6 @@ const LandingPage = () => {
             <div className="bar"></div>
             <div className="bar"></div>
           </div>
-        </div>
-        <div className={`mobile-menu ${showMobileMenu ? 'active' : ''}`}>
-          <ul>
-            <li><a href="#hero" onClick={() => setShowMobileMenu(false)}>Home</a></li>
-            <li><a href="#featured" onClick={() => setShowMobileMenu(false)}>Featured</a></li>
-            <li><a href="#categories" onClick={() => setShowMobileMenu(false)}>Categories</a></li>
-            <li><a href="#about" onClick={() => setShowMobileMenu(false)}>About</a></li>
-            <li><a href="#testimonials" onClick={() => setShowMobileMenu(false)}>Testimonials</a></li>
-            <li>
-              <Link to="/login" className="mobile-cta" onClick={() => setShowMobileMenu(false)}>Login</Link>
-            </li>
-          </ul>
         </div>
       </header>
 
@@ -285,16 +261,11 @@ const LandingPage = () => {
             </p>
           </div>
           <div className="hero-buttons animate-in delay-5">
-            <Link to="/login" className="primary-button">Get Started</Link>
+            <Link to="/profile" className="primary-button">Get Started</Link>
             <a href="#featured" className="secondary-button">Explore Articles</a>
           </div>
         </div>
-        <div className="scroll-indicator">
-          <div className="mouse">
-            <div className="wheel"></div>
-          </div>
-          <div className="arrow"></div>
-        </div>
+
       </section>
 
       {/* Featured Posts Section */}
@@ -505,7 +476,7 @@ const LandingPage = () => {
         <div className="cta-content">
           <h2>Ready to Share Your Story?</h2>
           <p>Join EchoVerse today and become part of a global community of writers and readers.</p>
-          <Link to="/login" className="primary-button large">Get Started Now</Link>
+          <Link to="/profile" className="primary-button large">Get Started Now</Link>
         </div>
       </section>
 
