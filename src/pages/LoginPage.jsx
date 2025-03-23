@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 // Mock Firebase functionality
@@ -211,6 +212,7 @@ const Login = () => {
           <button 
             type="submit" 
             className="submit-button"
+            onClick={() => navigate("/")}
             disabled={loading}
           >
             {loading ? (
